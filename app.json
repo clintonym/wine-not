@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "WineNot",
-    "slug": "WineNot",
+    "slug": "wine-not",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
