@@ -20,6 +20,9 @@ import {
 import AppLoading from "expo-app-loading";
 import {customTheme} from "./assets/theme/theme-winenot";
 import WineNot from "./src/WineNot";
+import {
+  TourGuideProvider,
+} from 'rn-tourguide'
 
 const App = () => {
 
@@ -44,9 +47,11 @@ const App = () => {
 
   return (
     <>
-      <NativeBaseProvider theme={customTheme}>
-        <WineNot />
-      </NativeBaseProvider>
+      <TourGuideProvider {...{ borderRadius: 16 }}>
+        <NativeBaseProvider theme={customTheme}>
+          <WineNot />
+        </NativeBaseProvider>
+      </TourGuideProvider>
     </>
   );
 };
