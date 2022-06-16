@@ -16,12 +16,6 @@ const HomeScreenContainer = () => {
   };
 
   useEffect(() => {
-    if (canStart && start) {
-      start();
-    }
-  }, [canStart]);
-
-  useEffect(() => {
     eventEmitter?.on('start', () => console.log('stop'));
     eventEmitter?.on('stop', () => console.log('stop'));
     eventEmitter?.on('stepChange', () => console.log(`stepChange`));

@@ -47,7 +47,10 @@ const App = () => {
 
   return (
     <>
-      <TourGuideProvider {...{ borderRadius: 16 }}>
+      <TourGuideProvider
+        {...{ borderRadius: 16 }}
+        androidStatusBarVisible
+      >
         <NativeBaseProvider theme={customTheme}>
           <WineNot />
         </NativeBaseProvider>

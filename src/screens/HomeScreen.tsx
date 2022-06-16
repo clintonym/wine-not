@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Center, Heading, HStack, Switch, Text, useColorMode, VStack} from "native-base";
+import {Button, Center, Heading, HStack, ScrollView, Switch, Text, useColorMode, VStack} from "native-base";
 import NativeBaseIcon from "../../components/NativeBaseIcon";
 import {
   TourGuideZone,
@@ -32,54 +32,82 @@ export const HomeScreen = (props: HomeScreenProps) => {
     <Center
       _dark={{ bg: "blueGray.900" }}
       _light={{ bg: "blueGray.50" }}
-      px={4}
       flex={1}
+      safeAreaTop
     >
-      <TourGuideZone
-        zone={5}
-        text={'Zone 5'}
-        borderRadius={16}
+      <ScrollView
+        contentContainerStyle={{
+          padding: 10,
+        }}
+        w="full"
+        h="full"
       >
-        <ToggleDarkMode />
-      </TourGuideZone>
-      <VStack space={5} alignItems="center">
-        <NativeBaseIcon/>
-        <TourGuideZone
-          zone={4}
-          text={'Zone 4'}
-          borderRadius={16}
+        <VStack
+          space="md"
+          alignItems="center"
         >
-          <ToggleDarkMode />
-        </TourGuideZone>
-        <TourGuideZone
-          zone={3}
-          text={'Zone 3'}
-          borderRadius={16}
-        >
-          <Heading size="lg">Welcome to NativeBase</Heading>
-        </TourGuideZone>
-        <HStack alignItems="center">
+          <NativeBaseIcon/>
           <TourGuideZone
-            zone={2}
-            text={'Zone 2'}
+            zone={4}
+            text={'Zone 4'}
             borderRadius={16}
           >
-            <Text>Edit and save to reload.</Text>
+            <ToggleDarkMode />
           </TourGuideZone>
-        </HStack>
-        <TourGuideZone
-          zone={1}
-          text={'Zone 1'}
-          borderRadius={16}
-        >
-          <Button
-            onPress={props.handleOnStart}
-            colorScheme="emerald"
+          <TourGuideZone
+            zone={3}
+            text={'Zone 3'}
+            borderRadius={16}
           >
-            Start Tour
-          </Button>
-        </TourGuideZone>
-      </VStack>
+            <Heading size="lg">Welcome to NativeBase</Heading>
+          </TourGuideZone>
+          <HStack alignItems="center">
+            <TourGuideZone
+              zone={2}
+              text={'Zone 2'}
+              borderRadius={16}
+            >
+              <Text>Edit and save to reload.</Text>
+            </TourGuideZone>
+          </HStack>
+          <TourGuideZone
+            zone={1}
+            text={'Zone 1'}
+            borderRadius={16}
+          >
+            <Button
+              onPress={props.handleOnStart}
+              colorScheme="emerald"
+            >
+              Start Tour
+            </Button>
+          </TourGuideZone>
+          <NativeBaseIcon/>
+          <TourGuideZone
+            zone={7}
+            text={'Zone 7'}
+            borderRadius={16}
+          >
+            <ToggleDarkMode />
+          </TourGuideZone>
+          <TourGuideZone
+            zone={6}
+            text={'Zone 6'}
+            borderRadius={16}
+          >
+            <Heading size="lg">Welcome to NativeBase</Heading>
+          </TourGuideZone>
+          <HStack alignItems="center">
+            <TourGuideZone
+              zone={5}
+              text={'Zone 5'}
+              borderRadius={16}
+            >
+              <Text>Edit and save to reload.</Text>
+            </TourGuideZone>
+          </HStack>
+        </VStack>
+      </ScrollView>
     </Center>
   );
 };
